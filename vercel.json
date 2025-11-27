@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "gym/**/*.php",
+      "use": "@vercel/php@1.0.0"
+    },
+    {
+      "src": "gym/assets/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "gym/uploads/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "/assets/(.*)", "dest": "/gym/assets/$1" },
+    { "src": "/uploads/(.*)", "dest": "/gym/uploads/$1" },
+    { "src": "/(.*)", "dest": "/gym/index.php" }
+  ],
+  "functions": {
+    "gym/**/*.php": { "runtime": "vercel-php@1.0.0" }
+  }
+}
