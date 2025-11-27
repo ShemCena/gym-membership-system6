@@ -1,0 +1,350 @@
+/* Fitness Club Management System - Compact Style Sheet */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    min-height: 100vh;
+}
+
+/* Compact Glass Cards */
+.glass-card {
+    background: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+/* Compact Sidebar */
+.sidebar {
+    width: 14rem; /* 224px */
+}
+
+.sidebar-logo {
+    width: 2.5rem; /* 40px */
+    height: 2.5rem;
+}
+
+.sidebar-title {
+    font-size: 1.125rem; /* 18px */
+}
+
+.sidebar-subtitle {
+    font-size: 0.75rem; /* 12px */
+}
+
+.sidebar-item {
+    transition: all 0.3s ease;
+    padding: 0.5rem; /* 8px */
+}
+
+.sidebar-item:hover {
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.2) 0%, transparent 100%);
+    border-left: 3px solid #6366f1;
+    padding-left: 1rem; /* 16px */
+}
+
+.sidebar-item.active {
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.3) 0%, transparent 100%);
+    border-left: 3px solid #6366f1;
+    padding-left: 1rem; /* 16px */
+}
+
+.sidebar-icon {
+    width: 1rem; /* 16px */
+    height: 1rem;
+    font-size: 0.875rem; /* 14px */
+}
+
+.sidebar-text {
+    font-size: 0.875rem; /* 14px */
+}
+
+/* Compact Main Content */
+.main-content {
+    margin-left: 14rem; /* Match sidebar width */
+    padding: 1rem; /* 16px */
+}
+
+/* Compact Headers */
+.page-title {
+    font-size: 1.5rem; /* 24px */
+}
+
+.page-subtitle {
+    font-size: 0.875rem; /* 14px */
+}
+
+/* Compact Stats Cards */
+.stat-card {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    transition: all 0.3s ease;
+    padding: 1rem; /* 16px */
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -5px rgba(99, 102, 241, 0.3);
+}
+
+.stat-icon {
+    width: 2.5rem; /* 40px */
+    height: 2.5rem;
+    font-size: 0.875rem; /* 14px */
+}
+
+.stat-value {
+    font-size: 1.25rem; /* 20px */
+}
+
+.stat-label {
+    font-size: 0.75rem; /* 12px */
+}
+
+.stat-badge {
+    font-size: 0.75rem; /* 12px */
+}
+
+/* Compact Charts */
+.chart-container {
+    position: relative;
+    height: 250px;
+}
+
+.chart-title {
+    font-size: 1.125rem; /* 18px */
+}
+
+/* Compact Forms */
+.form-group {
+    margin-bottom: 1rem; /* 16px */
+}
+
+.form-label {
+    font-size: 0.875rem; /* 14px */
+    margin-bottom: 0.25rem; /* 4px */
+}
+
+.form-input {
+    padding: 0.5rem; /* 8px */
+    font-size: 0.875rem; /* 14px */
+}
+
+.form-select {
+    padding: 0.5rem; /* 8px */
+    font-size: 0.875rem; /* 14px */
+}
+
+.form-textarea {
+    padding: 0.5rem; /* 8px */
+    font-size: 0.875rem; /* 14px */
+}
+
+/* Compact Buttons */
+.btn {
+    padding: 0.5rem 1rem; /* 8px 16px */
+    font-size: 0.875rem; /* 14px */
+    border-radius: 0.375rem; /* 6px */
+}
+
+.btn-sm {
+    padding: 0.375rem 0.75rem; /* 6px 12px */
+    font-size: 0.75rem; /* 12px */
+}
+
+.btn-lg {
+    padding: 0.75rem 1.5rem; /* 12px 24px */
+    font-size: 1rem; /* 16px */
+}
+
+/* Compact Tables */
+.table {
+    font-size: 0.875rem; /* 14px */
+}
+
+.table-header {
+    padding: 0.75rem; /* 12px */
+    font-size: 0.75rem; /* 12px */
+}
+
+.table-cell {
+    padding: 0.75rem; /* 12px */
+}
+
+/* Compact Cards */
+.card {
+    padding: 1rem; /* 16px */
+}
+
+.card-title {
+    font-size: 1.125rem; /* 18px */
+}
+
+.card-subtitle {
+    font-size: 0.875rem; /* 14px */
+}
+
+/* Compact Navigation */
+.nav-item {
+    padding: 0.5rem; /* 8px */
+    font-size: 0.875rem; /* 14px */
+}
+
+/* Compact Alerts */
+.alert {
+    padding: 0.75rem; /* 12px */
+    font-size: 0.875rem; /* 14px */
+}
+
+/* Compact Badges */
+.badge {
+    font-size: 0.75rem; /* 12px */
+    padding: 0.25rem 0.5rem; /* 4px 8px */
+}
+
+/* Compact Modal */
+.modal {
+    padding: 1rem; /* 16px */
+}
+
+.modal-header {
+    padding: 1rem; /* 16px */
+}
+
+.modal-body {
+    padding: 1rem; /* 16px */
+}
+
+.modal-footer {
+    padding: 1rem; /* 16px */
+}
+
+/* Compact Pagination */
+.pagination {
+    font-size: 0.875rem; /* 14px */
+}
+
+.pagination-item {
+    padding: 0.5rem; /* 8px */
+    font-size: 0.875rem; /* 14px */
+}
+
+/* Compact Search */
+.search-input {
+    padding: 0.5rem; /* 8px */
+    font-size: 0.875rem; /* 14px */
+}
+
+/* Compact Dropdown */
+.dropdown {
+    font-size: 0.875rem; /* 14px */
+}
+
+.dropdown-item {
+    padding: 0.5rem; /* 8px */
+    font-size: 0.875rem; /* 14px */
+}
+
+/* Compact Tabs */
+.tab {
+    padding: 0.5rem 1rem; /* 8px 16px */
+    font-size: 0.875rem; /* 14px */
+}
+
+/* Compact Progress */
+.progress {
+    height: 0.5rem; /* 8px */
+}
+
+/* Compact List */
+.list-item {
+    padding: 0.75rem; /* 12px */
+}
+
+/* Compact Footer */
+.footer {
+    font-size: 0.75rem; /* 12px */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 12rem; /* 192px */
+    }
+    
+    .main-content {
+        margin-left: 12rem;
+    }
+    
+    .stat-value {
+        font-size: 1.125rem; /* 18px */
+    }
+    
+    .page-title {
+        font-size: 1.25rem; /* 20px */
+    }
+}
+
+@media (max-width: 640px) {
+    .sidebar {
+        width: 10rem; /* 160px */
+    }
+    
+    .main-content {
+        margin-left: 10rem;
+    }
+    
+    .stat-card {
+        padding: 0.75rem; /* 12px */
+    }
+    
+    .card {
+        padding: 0.75rem; /* 12px */
+    }
+}
+
+/* Animations */
+.neon-text {
+    text-shadow: 0 0 5px rgba(99, 102, 241, 0.8),
+                 0 0 10px rgba(99, 102, 241, 0.6);
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.6);
+    transform: translateY(-1px);
+}
+
+.input-glow:focus {
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+}
+
+/* Utility classes for compact spacing */
+.gap-sm { gap: 0.5rem; } /* 8px */
+.gap-md { gap: 1rem; } /* 16px */
+.gap-lg { gap: 1.5rem; } /* 24px */
+
+.p-sm { padding: 0.5rem; } /* 8px */
+.p-md { padding: 1rem; } /* 16px */
+.p-lg { padding: 1.5rem; } /* 24px */
+
+.m-sm { margin: 0.5rem; } /* 8px */
+.m-md { margin: 1rem; } /* 16px */
+.m-lg { margin: 1.5rem; } /* 24px */
+
+.text-xs { font-size: 0.75rem; } /* 12px */
+.text-sm { font-size: 0.875rem; } /* 14px */
+.text-base { font-size: 1rem; } /* 16px */
+.text-lg { font-size: 1.125rem; } /* 18px */
+.text-xl { font-size: 1.25rem; } /* 20px */
+.text-2xl { font-size: 1.5rem; } /* 24px */
