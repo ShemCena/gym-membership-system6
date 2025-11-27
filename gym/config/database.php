@@ -1,36 +1,28 @@
 <?php
 class Database {
-    private $host = 'containers-us-west-XXX.railway.app';   // ← YOUR PUBLIC HOST HERE
+    private $host = 'sql307.infinityfree.com';
     private $port = '3306';
-    private $dbname = 'railway';
-    private $username = 'root';
-    private $password = 'FWoiUzdpLzyMRMeDUzyHupUupKAoESXy';
+    private $dbname = 'if0_37631348_gym';
+    private $username = 'if0_37631348';
+    private $password = 'GrokFixedYourProject123';
     private $charset = 'utf8mb4';
    
     public $pdo;
    
-    public function __construct() {
-        $this->connect();
-    }
+    public function __construct() { $this->connect(); }
    
     private function connect() {
         try {
             $dsn = "mysql:host={$this->host};port={$this->port};dbname={$this->dbname};charset={$this->charset}";
-            $options = [
-                PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-                PDO::ATTR_EMULATE_PREPARES   => false,
-            ];
-            $this->pdo = new PDO($dsn, $this->username, $this->password, $options);
+            $this->pdo = new PDO($dsn, $this->username, $this->password, [
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+            ]);
         } catch (PDOException $e) {
             die("Database connection failed: " . $e->getMessage());
         }
     }
    
     public function getConnection() { return $this->pdo; }
-    public function beginTransaction() { return $this->pdo->beginTransaction(); }
-    public function commit() { return $this->pdo->commit(); }
-    public function rollback() { return $this->pdo->rollback(); }
-    public function lastInsertId() { return $this->pdo->lastInsertId(); }
 }
 ?>
