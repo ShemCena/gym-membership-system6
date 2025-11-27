@@ -1,10 +1,13 @@
 <?php
+/**
+ * Database Configuration and Connection Class
+ * Fitness Club Management System
+ */
 class Database {
-    private $host = 'sql12.freesqldatabase.com';
-    private $port = '3306';           // ← ADD THIS LINE
-    private $dbname = 'sql12809706';
-    private $username = 'sql12809706';
-    private $password = 'sql12809706';
+    private $host = 'mysql.railway.internal';                 // ← RAILWAY HOST
+    private $dbname = 'railway';                              // ← RAILWAY DB NAME
+    private $username = 'root';                               // ← RAILWAY USER
+    private $password = 'FWoiUzdpLzyMRMeDUzyHupUupKAoESXy';   // ← YOUR PASSWORD
     private $charset = 'utf8mb4';
    
     public $pdo;
@@ -15,9 +18,7 @@ class Database {
    
     private function connect() {
         try {
-            // ← THIS LINE FIXED EVERYTHING
-            $dsn = "mysql:host={$this->host};port={$this->port};dbname={$this->dbname};charset={$this->charset}";
-            
+            $dsn = "mysql:host={$this->host};dbname={$this->dbname};charset={$this->charset}";
             $options = [
                 PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
