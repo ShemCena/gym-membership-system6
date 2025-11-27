@@ -4,11 +4,11 @@
  * Fitness Club Management System
  */
 class Database {
-    private $host = 'sql123.epizy.com';
+    private $host = 'db4free.net';
     private $port = '3306';
-    private $dbname = 'epiz_33809311_gymdb';
-    private $username = 'epiz_33809311';
-    private $password = 'GrokGymFixedIt2025!';
+    private $dbname = 'grok_gym_project';
+    private $username = 'grok_gym_user';
+    private $password = 'GrokGym2025SecurePass!';
     private $charset = 'utf8mb4';
    
     public $pdo;
