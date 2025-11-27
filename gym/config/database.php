@@ -1,13 +1,10 @@
 <?php
-/**
- * Database Configuration and Connection Class
- * Fitness Club Management System
- */
 class Database {
-    private $host = 'sql12.freesqldatabase.com';     // ← NEW
-    private $dbname = 'sql12809706';                 // ← NEW
-    private $username = 'sql12809706';               // ← NEW
-    private $password = 'sql12809706';               // ← NEW (your password is also sql12809706)
+    private $host = 'sql12.freesqldatabase.com';
+    private $port = '3306';           // ← ADD THIS LINE
+    private $dbname = 'sql12809706';
+    private $username = 'sql12809706';
+    private $password = 'sql12809706';
     private $charset = 'utf8mb4';
    
     public $pdo;
@@ -18,11 +15,13 @@ class Database {
    
     private function connect() {
         try {
-            $dsn = "mysql:host={$this->host};dbname={$this->dbname};charset={$this->charset}";
+            // ← THIS LINE FIXED EVERYTHING
+            $dsn = "mysql:host={$this->host};port={$this->port};dbname={$this->dbname};charset={$this->charset}";
+            
             $options = [
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-                PDO::ATTR_EMULATE_PREPARES => false,
+                PDO::ATTR_EMULATE_PREPARES   => false,
             ];
            
             $this->pdo = new PDO($dsn, $this->username, $this->password, $options);
@@ -35,20 +34,9 @@ class Database {
         return $this->pdo;
     }
    
-    public function beginTransaction() {
-        return $this->pdo->beginTransaction();
-    }
-   
-    public function commit() {
-        return $this->pdo->commit();
-    }
-   
-    public function rollback() {
-        return $this->pdo->rollback();
-    }
-   
-    public function lastInsertId() {
-        return $this->pdo->lastInsertId();
-    }
+    public function beginTransaction() { return $this->pdo->beginTransaction(); }
+    public function commit()           { return $this->pdo->commit(); }
+    public function rollback()         { return $this->pdo->rollback(); }
+    public function lastInsertId()     { return $this->pdo->lastInsertId(); }
 }
 ?>
